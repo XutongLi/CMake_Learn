@@ -37,7 +37,12 @@ install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
   )
 
 # enable testing
-enable_testing()
+# enable_testing()
+
+# enable dashboard scripting
+# the CTest module will automatically call enable_testing(), so we can remove it
+# cmake - make - ctest [-VV] -D Experimental
+include(CTest)
 
 # does the application run
 add_test(NAME Runs COMMAND Tutorial 25)

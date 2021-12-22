@@ -1,7 +1,7 @@
 # add the executable for MakeTable
 add_executable(MakeTable MakeTable.cxx)
 
-# add a custom command that specifies how to produce Table.h by running MaeTable
+# add a custom command that specifies how to produce Table.h by running MakeTable
 add_custom_command(
   OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/Table.h
   COMMAND MakeTable ${CMAKE_CURRENT_BINARY_DIR}/Table.h

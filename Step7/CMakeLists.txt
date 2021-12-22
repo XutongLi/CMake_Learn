@@ -1,3 +1,18 @@
+# build installation packages that support binaru installations and package management features
+
+# InstallRequiredSystemLibraries module will include any runtime 
+# libraries that are needed by the project for the current platform
+# Set some CPack variables to where we have stored the license and version
+# infromation for this project
+include(InstallRequiredSystemLibraries)
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
+set(CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
+include(CPack)
+# include the CPack module which will use these variables and some other properties
+# of the current system to setup an installer
+# in binary directory, run cpack, or make package
+
 cmake_minimum_required(VERSION 3.10)
 
 # set the project name and version
